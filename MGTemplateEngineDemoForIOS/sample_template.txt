@@ -1,0 +1,33 @@
+{{ hello }}
+
+现在是 {% now | date_format: "dd MMM yyyy 'at' HH:mm:ss" %}
+
+嵌套变量: {{people.name}}
+
+{% for star in stars %}
+	现在的 star 是: {{ star | uppercase }}...{% if star equalsString "路小雨" %} The Secrect!{% /if %}
+	{% if currentLoop.currentIndex == 0 %}
+		(最棒的!) {% comment %} 应该刚好是 周杰伦 {% /comment %}
+		{% for 1 to 5 %}*{% /for %}
+	{% /if %}
+{% /for %}
+
+{{ stars.@count }} 个star中的最后一个是 {{ stars.@lastObject | capitalized }}
+
+
+标签看起来像这样: {{ engine.delimiters.markerStart }} this {{ engine.delimiters.markerEnd }}
+变量看起来像这样: {{ engine.delimiters.expressionStart }} this {{ engine.delimiters.expressionEnd }}
+过滤器分隔符是 {{ engine.delimiters.filter }}
+
+我们也知道 {{ YES }} 和 {{ NO }} 或者 {{ true }} and {{ false }}
+
+1 比 2 小吗? {% if 1 < 2 %} 是的 {% else %} 不是的 {% /if %}
+
+{% literal %} 这些文字不会被 {% now %} 编译执行.{% /literal %}
+
+{% for 1 to 5 %}{{ currentLoop.currentIndex }}{%if currentLoop.currentIndex % 2%}[奇数] {%else%}[偶数] {%/if%}{% /for %}
+{% for 1 to 5 reversed %}{{ currentLoop.currentIndex }}{% cycle "[奇数] " "[偶数]" %}{% /for %}
+
+{% set "hello" "你好,世界" %}
+{{ hello }}
+到此,模板解析完成.

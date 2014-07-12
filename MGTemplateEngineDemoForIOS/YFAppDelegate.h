@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGTemplateEngine.h"
 
-@interface YFAppDelegate : UIResponder <UIApplicationDelegate>
+@interface YFAppDelegate : UIResponder <UIApplicationDelegate, MGTemplateEngineDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
 
 @end

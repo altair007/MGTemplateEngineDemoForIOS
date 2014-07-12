@@ -7,14 +7,58 @@
 //
 
 #import "YFAppDelegate.h"
+#import "ICUTemplateMatcher.h"
+#import "YFPerson.h"
 
 @implementation YFAppDelegate
+- (void)dealloc
+{
+    self.window = nil;
+    
+#if ! __has_feature(fobj_arc)
+    [super dealloc];
+#endif
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIWindow * window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    YFRelease(window);
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    /*原始DEMO代码.*/
+    // 用你所选择的匹配器设置模板引擎。
+	MGTemplateEngine *engine = [MGTemplateEngine templateEngine];
+	[engine setDelegate:self];
+	[engine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:engine]];
+	
+	// 设置所需的任何全局变量。
+	// 全局变量与模板引擎具有相同的生命周期,即使在处理多个模板时,仍然适用.
+	[engine setObject:@"你好!" forKey:@"hello"];
+	
+	// 获取模板地址.
+	NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"sample_template" ofType:@"txt"];
+
+	// 设置用于某个特定模板的变量。
+	NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:
+							   [NSArray arrayWithObjects:
+								@"周杰伦", @"桂纶镁", @"叶湘伦", @"路小雨", @"Mr.Right.", nil], @"stars",
+							   [NSDictionary dictionaryWithObjectsAndKeys:@"颜风", @"name", nil], @"people",
+							   nil];
+
+	// 处理模板,并显示结果.
+	NSString *result = [engine processTemplateInFileAtPath:templatePath withVariables:variables];
+
+    /* 显示模板内容. */
+    UITextView * textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 20, 320, 568)];
+    textView.backgroundColor = [UIColor orangeColor];
+    textView.text = result;
+    
+    [self.window addSubview: textView];
+    YFRelease(textView);
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -46,4 +90,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - MGTemplateEngineDelegate 协议方法.
+- (void)templateEngine:(MGTemplateEngine *)engine blockStarted:(NSDictionary *)blockInfo
+{
+    
+}
+- (void)templateEngine:(MGTemplateEngine *)engine blockEnded:(NSDictionary *)blockInfo
+{
+    
+}
+- (void)templateEngineFinishedProcessingTemplate:(MGTemplateEngine *)engine
+{
+    
+}
+- (void)templateEngine:(MGTemplateEngine *)engine encounteredError:(NSError *)error isContinuing:(BOOL)continuing
+{
+    
+}
 @end

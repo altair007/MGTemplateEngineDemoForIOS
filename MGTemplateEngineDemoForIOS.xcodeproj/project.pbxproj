@@ -19,6 +19,18 @@
 		C21FD0E91970C91900A816AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21FD0D11970C91900A816AA /* UIKit.framework */; };
 		C21FD0F11970C91900A816AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C21FD0EF1970C91900A816AA /* InfoPlist.strings */; };
 		C21FD0F31970C91900A816AA /* MGTemplateEngineDemoForIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD0F21970C91900A816AA /* MGTemplateEngineDemoForIOSTests.m */; };
+		C21FD1051970CD5000A816AA /* MGTemplateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD0FE1970CD5000A816AA /* MGTemplateEngine.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C21FD1061970CD5000A816AA /* MGTemplateStandardMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD1021970CD5000A816AA /* MGTemplateStandardMarkers.m */; };
+		C21FD1071970CD5000A816AA /* MGTemplateStandardFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD1041970CD5000A816AA /* MGTemplateStandardFilters.m */; };
+		C21FD10D1970CD6A00A816AA /* NSArray_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD10A1970CD6A00A816AA /* NSArray_DeepMutableCopy.m */; };
+		C21FD10E1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD10C1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m */; };
+		C21FD1111970CD7A00A816AA /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD1101970CD7A00A816AA /* ICUTemplateMatcher.m */; };
+		C21FD1151970CFAD00A816AA /* sample_template.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21FD1141970CFAD00A816AA /* sample_template.txt */; };
+		C21FD1171970E81A00A816AA /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21FD1161970E81A00A816AA /* README.txt */; };
+		C21FD11B1970E82500A816AA /* Writing Filters.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21FD1181970E82500A816AA /* Writing Filters.txt */; };
+		C21FD11C1970E82500A816AA /* Writing Markers.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21FD1191970E82500A816AA /* Writing Markers.txt */; };
+		C21FD11D1970E82500A816AA /* Writing Matchers.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21FD11A1970E82500A816AA /* Writing Matchers.txt */; };
+		C21FD1211970F15900A816AA /* YFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C21FD1201970F15900A816AA /* YFPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,28 @@
 		C21FD0EE1970C91900A816AA /* MGTemplateEngineDemoForIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGTemplateEngineDemoForIOSTests-Info.plist"; sourceTree = "<group>"; };
 		C21FD0F01970C91900A816AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C21FD0F21970C91900A816AA /* MGTemplateEngineDemoForIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTemplateEngineDemoForIOSTests.m; sourceTree = "<group>"; };
+		C21FD0FD1970CD5000A816AA /* MGTemplateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateEngine.h; sourceTree = "<group>"; };
+		C21FD0FE1970CD5000A816AA /* MGTemplateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateEngine.m; sourceTree = "<group>"; };
+		C21FD0FF1970CD5000A816AA /* MGTemplateMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateMarker.h; sourceTree = "<group>"; };
+		C21FD1001970CD5000A816AA /* MGTemplateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateFilter.h; sourceTree = "<group>"; };
+		C21FD1011970CD5000A816AA /* MGTemplateStandardMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardMarkers.h; sourceTree = "<group>"; };
+		C21FD1021970CD5000A816AA /* MGTemplateStandardMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardMarkers.m; sourceTree = "<group>"; };
+		C21FD1031970CD5000A816AA /* MGTemplateStandardFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardFilters.h; sourceTree = "<group>"; };
+		C21FD1041970CD5000A816AA /* MGTemplateStandardFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardFilters.m; sourceTree = "<group>"; };
+		C21FD1081970CD6A00A816AA /* DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepMutableCopy.h; sourceTree = "<group>"; };
+		C21FD1091970CD6A00A816AA /* NSArray_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_DeepMutableCopy.h; sourceTree = "<group>"; };
+		C21FD10A1970CD6A00A816AA /* NSArray_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_DeepMutableCopy.m; sourceTree = "<group>"; };
+		C21FD10B1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_DeepMutableCopy.h; sourceTree = "<group>"; };
+		C21FD10C1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_DeepMutableCopy.m; sourceTree = "<group>"; };
+		C21FD10F1970CD7A00A816AA /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUTemplateMatcher.h; sourceTree = "<group>"; };
+		C21FD1101970CD7A00A816AA /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUTemplateMatcher.m; sourceTree = "<group>"; };
+		C21FD1141970CFAD00A816AA /* sample_template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_template.txt; sourceTree = "<group>"; };
+		C21FD1161970E81A00A816AA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		C21FD1181970E82500A816AA /* Writing Filters.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Writing Filters.txt"; sourceTree = "<group>"; };
+		C21FD1191970E82500A816AA /* Writing Markers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Writing Markers.txt"; sourceTree = "<group>"; };
+		C21FD11A1970E82500A816AA /* Writing Matchers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Writing Matchers.txt"; sourceTree = "<group>"; };
+		C21FD11F1970F15900A816AA /* YFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPerson.h; sourceTree = "<group>"; };
+		C21FD1201970F15900A816AA /* YFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +143,12 @@
 			children = (
 				C21FD0DC1970C91900A816AA /* YFAppDelegate.h */,
 				C21FD0DD1970C91900A816AA /* YFAppDelegate.m */,
+				C21FD1141970CFAD00A816AA /* sample_template.txt */,
+				C21FD0FC1970CD1F00A816AA /* MGTemplateEngine */,
 				C21FD0DF1970C91900A816AA /* Images.xcassets */,
 				C21FD0D41970C91900A816AA /* Supporting Files */,
+				C21FD11F1970F15900A816AA /* YFPerson.h */,
+				C21FD1201970F15900A816AA /* YFPerson.m */,
 			);
 			path = MGTemplateEngineDemoForIOS;
 			sourceTree = "<group>";
@@ -142,6 +180,56 @@
 				C21FD0EF1970C91900A816AA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C21FD0FC1970CD1F00A816AA /* MGTemplateEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C21FD11E1970E83200A816AA /* Docs */,
+				C21FD1121970CDAF00A816AA /* Matchers */,
+				C21FD1131970CDCC00A816AA /* DeepMutableCopy */,
+				C21FD0FD1970CD5000A816AA /* MGTemplateEngine.h */,
+				C21FD0FE1970CD5000A816AA /* MGTemplateEngine.m */,
+				C21FD0FF1970CD5000A816AA /* MGTemplateMarker.h */,
+				C21FD1001970CD5000A816AA /* MGTemplateFilter.h */,
+				C21FD1011970CD5000A816AA /* MGTemplateStandardMarkers.h */,
+				C21FD1021970CD5000A816AA /* MGTemplateStandardMarkers.m */,
+				C21FD1031970CD5000A816AA /* MGTemplateStandardFilters.h */,
+				C21FD1041970CD5000A816AA /* MGTemplateStandardFilters.m */,
+			);
+			name = MGTemplateEngine;
+			sourceTree = "<group>";
+		};
+		C21FD1121970CDAF00A816AA /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				C21FD10F1970CD7A00A816AA /* ICUTemplateMatcher.h */,
+				C21FD1101970CD7A00A816AA /* ICUTemplateMatcher.m */,
+			);
+			name = Matchers;
+			sourceTree = "<group>";
+		};
+		C21FD1131970CDCC00A816AA /* DeepMutableCopy */ = {
+			isa = PBXGroup;
+			children = (
+				C21FD1081970CD6A00A816AA /* DeepMutableCopy.h */,
+				C21FD1091970CD6A00A816AA /* NSArray_DeepMutableCopy.h */,
+				C21FD10A1970CD6A00A816AA /* NSArray_DeepMutableCopy.m */,
+				C21FD10B1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.h */,
+				C21FD10C1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m */,
+			);
+			name = DeepMutableCopy;
+			sourceTree = "<group>";
+		};
+		C21FD11E1970E83200A816AA /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				C21FD1161970E81A00A816AA /* README.txt */,
+				C21FD1181970E82500A816AA /* Writing Filters.txt */,
+				C21FD1191970E82500A816AA /* Writing Markers.txt */,
+				C21FD11A1970E82500A816AA /* Writing Matchers.txt */,
+			);
+			name = Docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +308,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21FD11C1970E82500A816AA /* Writing Markers.txt in Resources */,
 				C21FD0D81970C91900A816AA /* InfoPlist.strings in Resources */,
 				C21FD0E01970C91900A816AA /* Images.xcassets in Resources */,
+				C21FD11D1970E82500A816AA /* Writing Matchers.txt in Resources */,
+				C21FD1171970E81A00A816AA /* README.txt in Resources */,
+				C21FD11B1970E82500A816AA /* Writing Filters.txt in Resources */,
+				C21FD1151970CFAD00A816AA /* sample_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21FD1111970CD7A00A816AA /* ICUTemplateMatcher.m in Sources */,
+				C21FD10D1970CD6A00A816AA /* NSArray_DeepMutableCopy.m in Sources */,
+				C21FD10E1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m in Sources */,
+				C21FD1061970CD5000A816AA /* MGTemplateStandardMarkers.m in Sources */,
+				C21FD1051970CD5000A816AA /* MGTemplateEngine.m in Sources */,
+				C21FD1211970F15900A816AA /* YFPerson.m in Sources */,
 				C21FD0DA1970C91900A816AA /* main.m in Sources */,
+				C21FD1071970CD5000A816AA /* MGTemplateStandardFilters.m in Sources */,
 				C21FD0DE1970C91900A816AA /* YFAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGTemplateEngineDemoForIOS/MGTemplateEngineDemoForIOS-Prefix.pch";
 				INFOPLIST_FILE = "MGTemplateEngineDemoForIOS/MGTemplateEngineDemoForIOS-Info.plist";
@@ -373,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGTemplateEngineDemoForIOS/MGTemplateEngineDemoForIOS-Prefix.pch";
 				INFOPLIST_FILE = "MGTemplateEngineDemoForIOS/MGTemplateEngineDemoForIOS-Info.plist";
