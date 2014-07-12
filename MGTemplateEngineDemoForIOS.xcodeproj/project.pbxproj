@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2079C5F1971086700A24C4C /* content_template.html in Resources */ = {isa = PBXBuildFile; fileRef = C2079C5C1971086700A24C4C /* content_template.html */; };
+		C2079C601971086700A24C4C /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = C2079C5D1971086700A24C4C /* content.css */; };
+		C2079C611971086700A24C4C /* content.js in Sources */ = {isa = PBXBuildFile; fileRef = C2079C5E1971086700A24C4C /* content.js */; };
 		C21FD0CE1970C91900A816AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21FD0CD1970C91900A816AA /* Foundation.framework */; };
 		C21FD0D01970C91900A816AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21FD0CF1970C91900A816AA /* CoreGraphics.framework */; };
 		C21FD0D21970C91900A816AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21FD0D11970C91900A816AA /* UIKit.framework */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2079C5C1971086700A24C4C /* content_template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = content_template.html; sourceTree = "<group>"; };
+		C2079C5D1971086700A24C4C /* content.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = content.css; sourceTree = "<group>"; };
+		C2079C5E1971086700A24C4C /* content.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
 		C21FD0CA1970C91900A816AA /* MGTemplateEngineDemoForIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGTemplateEngineDemoForIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21FD0CD1970C91900A816AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C21FD0CF1970C91900A816AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +147,9 @@
 		C21FD0D31970C91900A816AA /* MGTemplateEngineDemoForIOS */ = {
 			isa = PBXGroup;
 			children = (
+				C2079C5C1971086700A24C4C /* content_template.html */,
+				C2079C5D1971086700A24C4C /* content.css */,
+				C2079C5E1971086700A24C4C /* content.js */,
 				C21FD0DC1970C91900A816AA /* YFAppDelegate.h */,
 				C21FD0DD1970C91900A816AA /* YFAppDelegate.m */,
 				C21FD1141970CFAD00A816AA /* sample_template.txt */,
@@ -308,12 +317,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2079C601971086700A24C4C /* content.css in Resources */,
 				C21FD11C1970E82500A816AA /* Writing Markers.txt in Resources */,
 				C21FD0D81970C91900A816AA /* InfoPlist.strings in Resources */,
 				C21FD0E01970C91900A816AA /* Images.xcassets in Resources */,
 				C21FD11D1970E82500A816AA /* Writing Matchers.txt in Resources */,
 				C21FD1171970E81A00A816AA /* README.txt in Resources */,
 				C21FD11B1970E82500A816AA /* Writing Filters.txt in Resources */,
+				C2079C5F1971086700A24C4C /* content_template.html in Resources */,
 				C21FD1151970CFAD00A816AA /* sample_template.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +348,7 @@
 				C21FD10D1970CD6A00A816AA /* NSArray_DeepMutableCopy.m in Sources */,
 				C21FD10E1970CD6A00A816AA /* NSDictionary_DeepMutableCopy.m in Sources */,
 				C21FD1061970CD5000A816AA /* MGTemplateStandardMarkers.m in Sources */,
+				C2079C611971086700A24C4C /* content.js in Sources */,
 				C21FD1051970CD5000A816AA /* MGTemplateEngine.m in Sources */,
 				C21FD1211970F15900A816AA /* YFPerson.m in Sources */,
 				C21FD0DA1970C91900A816AA /* main.m in Sources */,
@@ -542,6 +554,7 @@
 				C21FD0F81970C91900A816AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C21FD0F91970C91900A816AA /* Build configuration list for PBXNativeTarget "MGTemplateEngineDemoForIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +563,7 @@
 				C21FD0FB1970C91900A816AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

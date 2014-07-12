@@ -36,28 +36,28 @@
 	
 	// 设置所需的任何全局变量。
 	// 全局变量与模板引擎具有相同的生命周期,即使在处理多个模板时,仍然适用.
-	[engine setObject:@"你好!" forKey:@"hello"];
+	[engine setObject:@"标题!" forKey:@"title"];
 	
 	// 获取模板地址.
-	NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"sample_template" ofType:@"txt"];
+	NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"content_template" ofType:@"html"];
 
 	// 设置用于某个特定模板的变量。
-	NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:
-							   [NSArray arrayWithObjects:
-								@"周杰伦", @"桂纶镁", @"叶湘伦", @"路小雨", @"Mr.Right.", nil], @"stars",
-							   [NSDictionary dictionaryWithObjectsAndKeys:@"颜风", @"name", nil], @"people",
-							   nil];
+	NSDictionary *variables = @{@"title": @"标题",
+                                @"source": @"魅影新闻",
+                                @"ptime": @"发表时间",
+                                @"digest": @""};
 
 	// 处理模板,并显示结果.
 	NSString *result = [engine processTemplateInFileAtPath:templatePath withVariables:variables];
 
     /* 显示模板内容. */
-    UITextView * textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 20, 320, 568)];
-    textView.backgroundColor = [UIColor orangeColor];
-    textView.text = result;
+    UIWebView * webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, 320, 568)];
+    webView.backgroundColor = [UIColor orangeColor];
+
+    [webView loadHTMLString: result baseURL: nil];
     
-    [self.window addSubview: textView];
-    YFRelease(textView);
+    [self.window addSubview: webView];
+    YFRelease(webView);
     
     [self.window makeKeyAndVisible];
     return YES;
